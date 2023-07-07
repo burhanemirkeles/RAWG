@@ -8,7 +8,6 @@ target 'RAWG' do
   # Pods for RAWG
 pod 'Carbon'
 pod 'Alamofire'
-pod 'SwiftLint'
 pod 'SnapKit'
 pod 'Kingfisher', '~> 7.0'
 
