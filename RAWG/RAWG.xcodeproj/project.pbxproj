@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59C07B9B3EF303976591579F /* Pods_RAWG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18137E84D336E09676C0919 /* Pods_RAWG.framework */; };
 		7595FAE12A582FBA007D5BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE02A582FBA007D5BBC /* AppDelegate.swift */; };
 		7595FAE32A582FBA007D5BBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE22A582FBA007D5BBC /* SceneDelegate.swift */; };
 		7595FAE52A582FBA007D5BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE42A582FBA007D5BBC /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		7595FAE92A582FBA007D5BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7595FAEC2A582FBA007D5BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7595FAEE2A582FBA007D5BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C2AC6C3AFD695DD8588D461 /* Pods-RAWG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAWG.debug.xcconfig"; path = "Target Support Files/Pods-RAWG/Pods-RAWG.debug.xcconfig"; sourceTree = "<group>"; };
+		A18137E84D336E09676C0919 /* Pods_RAWG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAWG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92761DBFAB862E5DF4D8962 /* Pods-RAWG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAWG.release.xcconfig"; path = "Target Support Files/Pods-RAWG/Pods-RAWG.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C07B9B3EF303976591579F /* Pods_RAWG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F4F85945C84F5A09A62DAE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C2AC6C3AFD695DD8588D461 /* Pods-RAWG.debug.xcconfig */,
+				E92761DBFAB862E5DF4D8962 /* Pods-RAWG.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7595FAD42A582FBA007D5BBC = {
 			isa = PBXGroup;
 			children = (
 				7595FADF2A582FBA007D5BBC /* RAWG */,
 				7595FADE2A582FBA007D5BBC /* Products */,
+				1F4F85945C84F5A09A62DAE5 /* Pods */,
+				C19CB81FBA1E8E5CA7575DB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = RAWG;
 			sourceTree = "<group>";
 		};
+		C19CB81FBA1E8E5CA7575DB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A18137E84D336E09676C0919 /* Pods_RAWG.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7595FAF12A582FBA007D5BBC /* Build configuration list for PBXNativeTarget "RAWG" */;
 			buildPhases = (
+				9D979B8D7A7746F52EAE0F6F /* [CP] Check Pods Manifest.lock */,
 				7595FAD92A582FBA007D5BBC /* Sources */,
 				7595FADA2A582FBA007D5BBC /* Frameworks */,
 				7595FADB2A582FBA007D5BBC /* Resources */,
+				FC302C2EA364D3B1BED757DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D979B8D7A7746F52EAE0F6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RAWG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC302C2EA364D3B1BED757DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RAWG/Pods-RAWG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RAWG/Pods-RAWG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RAWG/Pods-RAWG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7595FAD92A582FBA007D5BBC /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		7595FAF22A582FBA007D5BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C2AC6C3AFD695DD8588D461 /* Pods-RAWG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		7595FAF32A582FBA007D5BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92761DBFAB862E5DF4D8962 /* Pods-RAWG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
