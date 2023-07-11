@@ -47,31 +47,31 @@ final class GameCellView: UIView {
       $0.leading.equalTo(152)
     }
 
-    metacriticLabel.snp.makeConstraints { make in
-      make.top.equalTo(84)
-      make.trailing.equalTo(-147)
-      make.leading.equalTo(152)
+    metacriticLabel.snp.makeConstraints {
+      $0.top.equalTo(84)
+      $0.trailing.equalTo(-147)
+      $0.leading.equalTo(152)
     }
 
-    metaScoreLabel.snp.makeConstraints { make in
-      make.top.equalTo(metacriticLabel)
-      make.leading.equalTo(metacriticLabel.snp.trailing).offset(2)
-      make.bottom.equalTo(metacriticLabel)
+    metaScoreLabel.snp.makeConstraints {
+      $0.top.equalTo(metacriticLabel)
+      $0.leading.equalTo(metacriticLabel.snp.trailing).offset(2)
+      $0.bottom.equalTo(metacriticLabel)
     }
 
-    genreTitleLabel.snp.makeConstraints { make in
-      make.top.equalTo(metacriticLabel.snp.bottom).offset(8)
-      make.trailing.equalTo(-16)
-      make.leading.equalTo(152)
+    genreTitleLabel.snp.makeConstraints {
+      $0.top.equalTo(metacriticLabel.snp.bottom).offset(8)
+      $0.trailing.equalTo(-16)
+      $0.leading.equalTo(152)
     }
 
-    imageView.snp.makeConstraints { make in
-      make.top.equalToSuperview().offset(16)
-      make.leading.equalTo(16)
-      make.trailing.equalTo(titleLabel.snp.leading).offset(-16)
-      make.bottom.equalToSuperview().offset(16)
-      make.height.equalTo(104)
-      make.width.equalTo(120)
+    imageView.snp.makeConstraints {
+      $0.top.equalToSuperview().offset(16)
+      $0.leading.equalTo(16)
+      $0.trailing.equalTo(titleLabel.snp.leading).offset(-16)
+      $0.bottom.equalToSuperview().offset(16)
+      $0.height.equalTo(104)
+      $0.width.equalTo(120)
     }
   }
 
