@@ -18,6 +18,8 @@
 		758E426F2A5DB55F004DC3D4 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E426E2A5DB55F004DC3D4 /* FavoritesViewController.swift */; };
 		758E42732A5DB93B004DC3D4 /* GameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E42722A5DB93B004DC3D4 /* GameCellView.swift */; };
 		758E42752A5DBD8C004DC3D4 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E42742A5DBD8C004DC3D4 /* GameDetailViewController.swift */; };
+		758E42772A5DC472004DC3D4 /* GameCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E42762A5DC472004DC3D4 /* GameCellItem.swift */; };
+		758E427A2A5DC63A004DC3D4 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E42792A5DC63A004DC3D4 /* UIImageView+Extension.swift */; };
 		7595FAE12A582FBA007D5BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE02A582FBA007D5BBC /* AppDelegate.swift */; };
 		7595FAE32A582FBA007D5BBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE22A582FBA007D5BBC /* SceneDelegate.swift */; };
 		7595FAE52A582FBA007D5BBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE42A582FBA007D5BBC /* MainViewController.swift */; };
@@ -37,6 +39,8 @@
 		758E426E2A5DB55F004DC3D4 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		758E42722A5DB93B004DC3D4 /* GameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellView.swift; sourceTree = "<group>"; };
 		758E42742A5DBD8C004DC3D4 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		758E42762A5DC472004DC3D4 /* GameCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellItem.swift; sourceTree = "<group>"; };
+		758E42792A5DC63A004DC3D4 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7595FADD2A582FBA007D5BBC /* RAWG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAWG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7595FAE02A582FBA007D5BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7595FAE22A582FBA007D5BBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,8 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				758E42722A5DB93B004DC3D4 /* GameCellView.swift */,
+				758E42762A5DC472004DC3D4 /* GameCellItem.swift */,
 			);
 			path = GameCellView;
+			sourceTree = "<group>";
+		};
+		758E42782A5DC622004DC3D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				758E42792A5DC63A004DC3D4 /* UIImageView+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7595FAD42A582FBA007D5BBC = {
@@ -149,6 +162,7 @@
 		7595FADF2A582FBA007D5BBC /* RAWG */ = {
 			isa = PBXGroup;
 			children = (
+				758E42782A5DC622004DC3D4 /* Helpers */,
 				758E42702A5DB928004DC3D4 /* Views */,
 				758E426B2A5DB529004DC3D4 /* Scenes */,
 				758E426A2A5DB47A004DC3D4 /* Base */,
@@ -284,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758E427A2A5DC63A004DC3D4 /* UIImageView+Extension.swift in Sources */,
 				753F894B2A5BE536005B6CC3 /* GameDetail.swift in Sources */,
 				7595FAE52A582FBA007D5BBC /* MainViewController.swift in Sources */,
 				753F89472A5BE4DF005B6CC3 /* Game.swift in Sources */,
@@ -296,6 +311,7 @@
 				753F89492A5BE4FB005B6CC3 /* Genre.swift in Sources */,
 				758E42732A5DB93B004DC3D4 /* GameCellView.swift in Sources */,
 				758E42682A5DB0D7004DC3D4 /* GamesServiceProtocol.swift in Sources */,
+				758E42772A5DC472004DC3D4 /* GameCellItem.swift in Sources */,
 				758E42752A5DBD8C004DC3D4 /* GameDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
