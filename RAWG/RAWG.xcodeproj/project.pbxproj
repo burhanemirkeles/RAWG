@@ -13,6 +13,7 @@
 		753F89472A5BE4DF005B6CC3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F89462A5BE4DF005B6CC3 /* Game.swift */; };
 		753F89492A5BE4FB005B6CC3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F89482A5BE4FB005B6CC3 /* Genre.swift */; };
 		753F894B2A5BE536005B6CC3 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F894A2A5BE536005B6CC3 /* GameDetail.swift */; };
+		758E42682A5DB0D7004DC3D4 /* GamesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E42672A5DB0D7004DC3D4 /* GamesServiceProtocol.swift */; };
 		7595FAE12A582FBA007D5BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE02A582FBA007D5BBC /* AppDelegate.swift */; };
 		7595FAE32A582FBA007D5BBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE22A582FBA007D5BBC /* SceneDelegate.swift */; };
 		7595FAE52A582FBA007D5BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FAE42A582FBA007D5BBC /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		753F89462A5BE4DF005B6CC3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		753F89482A5BE4FB005B6CC3 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		753F894A2A5BE536005B6CC3 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
+		758E42672A5DB0D7004DC3D4 /* GamesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesServiceProtocol.swift; sourceTree = "<group>"; };
 		7595FADD2A582FBA007D5BBC /* RAWG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAWG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7595FAE02A582FBA007D5BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7595FAE22A582FBA007D5BBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				753F89412A5BE487005B6CC3 /* GamesService.swift */,
+				758E42672A5DB0D7004DC3D4 /* GamesServiceProtocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				753F89452A5BE4BA005B6CC3 /* GameResponse.swift in Sources */,
 				753F89422A5BE487005B6CC3 /* GamesService.swift in Sources */,
 				753F89492A5BE4FB005B6CC3 /* Genre.swift in Sources */,
+				758E42682A5DB0D7004DC3D4 /* GamesServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
