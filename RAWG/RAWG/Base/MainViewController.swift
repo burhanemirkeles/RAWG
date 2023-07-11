@@ -22,7 +22,7 @@ class MainViewController: UITabBarController {
     let secondViewController = FavoritesViewController()
     secondViewController.tabBarItem = UITabBarItem(title: "Favorites",
                                                    image: UIImage(named: "FavoritesIcon"),
-                                                   selectedImage: UIImage(named: "favoritesIconSelected"))
+                                                   tag: 1)
 
 
     viewControllers = [firstViewController, secondViewController]
