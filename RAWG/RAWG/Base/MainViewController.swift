@@ -14,7 +14,7 @@ class MainViewController: UITabBarController {
     super.viewDidLoad()
     view.backgroundColor = .white
 
-    let firstViewController = GamesViewController()
+    let firstViewController = RGamesViewController()
     firstViewController.tabBarItem = UITabBarItem(title: "Games",
                                                   image: UIImage(named: "GamesIcon"),
                                                   tag: 0)

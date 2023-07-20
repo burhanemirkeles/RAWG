@@ -15,7 +15,7 @@ final class EmptyCellView: UIView {
 
   private struct Const {
     static let emptyLabelText: String = "No game has been searched.."
-    static let emptyLabelFont = UIFont(name: "Roboto-Bold", size: 18)
+    static let emptyLabelFont = UIFont(name: Fonts.Roboto.bold, size: 18)
     static let emptyLabelMinScaleFactor: CGFloat = 0.5
 
     static let emptyLabelTopOffset = 38
