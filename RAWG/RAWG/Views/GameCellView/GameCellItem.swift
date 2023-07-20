@@ -22,9 +22,9 @@ struct GameCellItem: IdentifiableComponent {
 
   func render(in content: GameCellView) {
     content.titleLabel.text = game.name
-    content.titleLabel.font = UIFont(name: "Roboto-Bold", size: 20)
+    content.titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 20)
     content.metacriticLabel.text = "metacritic: "
-    content.metacriticLabel.font = UIFont(name: "Roboto-Medium", size: 14.0)
+    content.metacriticLabel.font = UIFont(name: Fonts.Roboto.medium, size: 14.0)
     if let metacritic = game.metacritic {
         content.metaScoreLabel.text = String(metacritic)
         content.metaScoreLabel.textColor = .red
@@ -38,7 +38,7 @@ struct GameCellItem: IdentifiableComponent {
         } else {
             content.genreTitleLabel.text = "N/A"
         }
-      content.genreTitleLabel.font = UIFont(name: "Roboto-Thin", size: 12.0)
+      content.genreTitleLabel.font = UIFont(name: Fonts.Roboto.thin, size: 12.0)
     }
 
     if let gameImage = game.gameImage, let url = URL(string: gameImage) {

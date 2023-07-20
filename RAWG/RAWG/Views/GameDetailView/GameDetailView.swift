@@ -57,12 +57,12 @@ final class GameDetailView: UIView, Component {
     self.addSubview(secondSepartorView)
     self.addSubview(visitWebsiteButton)
 
-    titleLabel.font = UIFont(name: "Roboto-Bold", size: 36)
+    titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 36)
     titleLabel.textColor = .white
     titleLabel.textAlignment = .right
 
     gameDescription.text = "Game Description"
-    gameDescription.font = UIFont(name: "Roboto-Regular", size: 18)
+    gameDescription.font = UIFont(name: Fonts.Roboto.regular, size: 18)
     gameDescription.numberOfLines = 4
     gameDescription.translatesAutoresizingMaskIntoConstraints = false
 
@@ -70,7 +70,7 @@ final class GameDetailView: UIView, Component {
 
     visitRedditButton.setTitle("Visit Reddit", for: .normal)
     visitRedditButton.setTitleColor(.black, for: .normal)
-    visitRedditButton.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 59)
+    visitRedditButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 59)
     visitRedditButton.contentHorizontalAlignment = .left
 
     visitRedditButton.addTarget(self, action: #selector(visitButtonTapped), for: .touchUpInside)
@@ -79,7 +79,7 @@ final class GameDetailView: UIView, Component {
 
     visitWebsiteButton.setTitle("Visit Website", for: .normal)
     visitWebsiteButton.setTitleColor(.black, for: .normal)
-    visitWebsiteButton.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 59)
+    visitWebsiteButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 59)
     visitWebsiteButton.contentHorizontalAlignment = .left
 
     visitWebsiteButton.addTarget(self, action: #selector(visitButtonTapped), for: .touchUpInside)
