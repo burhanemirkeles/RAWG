@@ -22,7 +22,7 @@ struct GameCellItem: IdentifiableComponent {
 
   func render(in content: GameCellView) {
     content.titleLabel.text = game.name
-    content.titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 20)
+    content.titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 20.0)
     content.metacriticLabel.text = "metacritic: "
     content.metacriticLabel.font = UIFont(name: Fonts.Roboto.medium, size: 14.0)
     if let metacritic = game.metacritic {
