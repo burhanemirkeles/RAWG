@@ -62,7 +62,7 @@ final class GameDetailView: UIView, Component {
     titleLabel.textAlignment = .right
 
     gameDescription.text = "Game Description"
-    gameDescription.font = UIFont(name: Fonts.Roboto.regular, size: 18)
+    gameDescription.font = UIFont(name: Fonts.Roboto.regular, size: 12)
     gameDescription.numberOfLines = 4
     gameDescription.translatesAutoresizingMaskIntoConstraints = false
 
@@ -70,7 +70,7 @@ final class GameDetailView: UIView, Component {
 
     visitRedditButton.setTitle("Visit Reddit", for: .normal)
     visitRedditButton.setTitleColor(.black, for: .normal)
-    visitRedditButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 59)
+    visitRedditButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 18)
     visitRedditButton.contentHorizontalAlignment = .left
 
     visitRedditButton.addTarget(self, action: #selector(visitButtonTapped), for: .touchUpInside)
@@ -79,7 +79,7 @@ final class GameDetailView: UIView, Component {
 
     visitWebsiteButton.setTitle("Visit Website", for: .normal)
     visitWebsiteButton.setTitleColor(.black, for: .normal)
-    visitWebsiteButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 59)
+    visitWebsiteButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 18)
     visitWebsiteButton.contentHorizontalAlignment = .left
 
     visitWebsiteButton.addTarget(self, action: #selector(visitButtonTapped), for: .touchUpInside)
