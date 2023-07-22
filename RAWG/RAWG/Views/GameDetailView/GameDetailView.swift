@@ -28,6 +28,8 @@ final class GameDetailView: UIView, Component {
   var gameDescriptionLabel: UILabel = UILabel()
   var gameDescription: UILabel = UILabel()
   var imageView = UIImageView()
+  var buttonIconOfReddit = UIImageView()
+  var buttonIconOfWebsite = UIImageView()
   var visitRedditButton = UIButton()
   var visitWebsiteButton = UIButton()
   var redditUrl: String?
@@ -56,6 +58,8 @@ final class GameDetailView: UIView, Component {
     self.addSubview(visitRedditButton)
     self.addSubview(secondSepartorView)
     self.addSubview(visitWebsiteButton)
+    self.visitRedditButton.addSubview(buttonIconOfReddit)
+    self.visitWebsiteButton.addSubview(buttonIconOfWebsite)
 
     titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 36)
     titleLabel.textColor = .white
@@ -72,6 +76,10 @@ final class GameDetailView: UIView, Component {
     visitRedditButton.setTitleColor(.black, for: .normal)
     visitRedditButton.titleLabel?.font = UIFont(name: Fonts.Roboto.regular, size: 18)
     visitRedditButton.contentHorizontalAlignment = .left
+
+    let image = UIImage(named: "GoIcon")?.imageWithAlphaValue(0.8)
+    buttonIconOfReddit.image = image
+    buttonIconOfWebsite.image = image
 
     visitRedditButton.addTarget(self, action: #selector(visitButtonTapped), for: .touchUpInside)
 
@@ -132,7 +140,6 @@ final class GameDetailView: UIView, Component {
     visitRedditButton.snp.makeConstraints {
       $0.top.equalTo(firstSeperatorView.snp.bottom).offset(32)
       $0.left.equalTo(16)
-      $0.right.equalTo(-16)
     }
 
     secondSepartorView.snp.makeConstraints {
@@ -145,6 +152,20 @@ final class GameDetailView: UIView, Component {
     visitWebsiteButton.snp.makeConstraints {
       $0.top.equalTo(secondSepartorView.snp.bottom).offset(32)
       $0.left.equalTo(16)
+    }
+
+    buttonIconOfReddit.snp.makeConstraints {
+      $0.leading.equalTo(visitRedditButton.snp.trailing).offset(6)
+      $0.height.equalTo(16)
+      $0.width.equalTo(16)
+      $0.centerY.equalTo(visitRedditButton.snp.centerY)
+    }
+
+    buttonIconOfWebsite.snp.makeConstraints {
+      $0.leading.equalTo(visitWebsiteButton.snp.trailing).offset(6)
+      $0.height.equalTo(16)
+      $0.width.equalTo(16)
+      $0.centerY.equalTo(visitWebsiteButton.snp.centerY)
     }
 
   }

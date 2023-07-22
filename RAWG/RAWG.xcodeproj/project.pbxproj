@@ -47,6 +47,7 @@
 		75C06C702A6C692A001D3F9C /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C06C6F2A6C692A001D3F9C /* TableViewAdapter.swift */; };
 		75C06C732A6C6989001D3F9C /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C06C722A6C6989001D3F9C /* GamesView.swift */; };
 		75C06C762A6C6B44001D3F9C /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C06C752A6C6B44001D3F9C /* GameDetailViewModel.swift */; };
+		75C06C782A6C7C8D001D3F9C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C06C772A6C7C8D001D3F9C /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		75C06C6F2A6C692A001D3F9C /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		75C06C722A6C6989001D3F9C /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		75C06C752A6C6B44001D3F9C /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
+		75C06C772A6C7C8D001D3F9C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		7C2AC6C3AFD695DD8588D461 /* Pods-RAWG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAWG.debug.xcconfig"; path = "Target Support Files/Pods-RAWG/Pods-RAWG.debug.xcconfig"; sourceTree = "<group>"; };
 		A18137E84D336E09676C0919 /* Pods_RAWG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAWG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92761DBFAB862E5DF4D8962 /* Pods-RAWG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAWG.release.xcconfig"; path = "Target Support Files/Pods-RAWG/Pods-RAWG.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				750F68AB2A69624700594E08 /* Roboto-Thin.ttf */,
 				750F68AA2A69624700594E08 /* Roboto-ThinItalic.ttf */,
 				750F68B92A69639400594E08 /* Fonts.swift */,
+				75C06C772A6C7C8D001D3F9C /* UIImage+Extension.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				753F89422A5BE487005B6CC3 /* GamesService.swift in Sources */,
 				753F89492A5BE4FB005B6CC3 /* Genre.swift in Sources */,
 				758E42732A5DB93B004DC3D4 /* GameCellView.swift in Sources */,
+				75C06C782A6C7C8D001D3F9C /* UIImage+Extension.swift in Sources */,
 				750F68962A69556400594E08 /* EmptyCellItem.swift in Sources */,
 				758E42682A5DB0D7004DC3D4 /* GamesServiceProtocol.swift in Sources */,
 				750F68BA2A69639400594E08 /* Fonts.swift in Sources */,
