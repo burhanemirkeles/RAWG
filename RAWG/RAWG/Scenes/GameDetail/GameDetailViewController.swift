@@ -30,7 +30,9 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
   var gameId: Int?
   let gameDetailView = GameDetailView()
   private let tableView: UITableView = UITableView()
+
   var context: NSManagedObjectContext!
+  let gameStore = GameStore()
   
   private let renderer = Renderer(adapter: UITableViewAdapter(),
                                   updater: UITableViewUpdater())
@@ -45,7 +47,7 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
     renderer.target = tableView
     configureTableView()
     addFavoriteButton()
-
+    context = gameStore.persistentContainer.viewContext
   }
 
   func render() {
@@ -79,7 +81,32 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
   }
 
   @objc func favoriteButtonTapped() {
-    // TODO: fav button
+    let game = GameData(context: context)
+
+    let gameDetail = GameDetail(
+    id: viewModel.gameDetail?.id ?? 0,
+    name: viewModel.gameDetail?.name ?? "",
+    backgroundImage: viewModel.gameDetail?.backgroundImage ?? "",
+    description: viewModel.gameDetail?.description ?? "",
+    redditUrl: viewModel.gameDetail?.redditUrl ?? "",
+    website: viewModel.gameDetail?.website ?? "",
+    genres: viewModel.gameDetail?.genres ?? [],
+    metacritic: viewModel.gameDetail?.metacritic ?? 0)
+
+    let combinedString = viewModel.gameDetail?.genres.compactMap { $0.name }.joined(separator: ", ")
+
+    game.gameId = Int32(gameDetail.id)
+    game.gameName = gameDetail.name
+    game.gameImage = gameDetail.backgroundImage
+    game.gameGenres = combinedString
+    game.gameMetacriticScore = gameDetail.metacritic != nil ? Int32(gameDetail.metacritic!) : 0
+
+    do {
+        try context.save()
+      print(game)
+    } catch {
+        print("Error while saving: \(error)")
+    }
   }
 
   private func configureTableView() {
