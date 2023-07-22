@@ -9,8 +9,11 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
 
+  let favoritesView = FavoritesView()
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    view.addSubview(favoritesView)
+
   }
 }
+
