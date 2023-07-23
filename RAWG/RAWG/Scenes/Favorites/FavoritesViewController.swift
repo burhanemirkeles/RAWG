@@ -10,6 +10,9 @@ import UIKit
 class FavoritesViewController: UIViewController {
 
   let favoritesView = FavoritesView()
+  private let tableView: UITableView = UITableView()
+  var viewModel: FavoritesViewModel = FavoritesViewModel()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(favoritesView)
