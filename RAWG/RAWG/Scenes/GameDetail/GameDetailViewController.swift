@@ -68,6 +68,7 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
 
     let detailSection = Section(id: "DetailSection", cells: nodes)
     renderer.render(detailSection)
+    addFavoriteButton()
 
   }
 
@@ -110,12 +111,17 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
     if !viewModel.checkIsGameFavorited(desiredGameId: gameId ?? 0) {
       do {
         try context.save()
+        render()
         print(game)
       } catch {
         print("Error while saving: \(error)")
       }
     } else {
-      // TODO: UNFAVORITE 
+      do {
+       viewModel.unfavoriteGame(withId: gameId ?? 0)
+        render()
+        print(game)
+      }
     }
   }
 

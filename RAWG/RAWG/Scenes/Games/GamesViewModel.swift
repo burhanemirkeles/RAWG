@@ -94,6 +94,31 @@ class GamesViewModel {
     return isFavorited
   }
 
+  func unfavoriteGame(withId: Int) {
+    let context = gameStore.persistentContainer.viewContext
+
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameData")
+
+    let predicate = NSPredicate(format: "gameId == %d", Int(withId))
+    fetchRequest.predicate = predicate
+
+    do {
+      let result = try context.fetch(fetchRequest)
+      if let matchedEntity = result.first as? NSManagedObject {
+        // 3. Seçilen Varlığı Silme
+        context.delete(matchedEntity)
+
+        // 4. Değişiklikleri Kaydetme
+        try context.save()
+      } else {
+        // Eşleşen varlık bulunamadı
+      }
+    } catch let error as NSError {
+      // Hata yönetimi yapılabilir
+      print("Hata: \(error), \(error.userInfo)")
+    }
+  }
+
 }
 
 // MARK: Delegate
