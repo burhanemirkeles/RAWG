@@ -16,6 +16,7 @@ final class GameCellView: UIView {
   var metaScoreLabel: UILabel = UILabel()
   var genreTitleLabel: UILabel = UILabel()
   var imageView = UIImageView()
+  weak var gameViewModel = GamesViewModel()
 
   weak var delegate: GameCellViewDelegate?
 
@@ -85,6 +86,7 @@ final class GameCellView: UIView {
      self.delegate?.didSelect()
 
      let gameDetailViewController = GameDetailViewController()
+    gameViewModel?.selectedGameId = id
 
     if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
        gameDetailViewController.gameId = self.id
