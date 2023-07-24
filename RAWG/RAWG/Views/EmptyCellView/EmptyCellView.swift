@@ -14,7 +14,6 @@ final class EmptyCellView: UIView {
   var emptyLabel: UILabel = UILabel()
 
   private struct Const {
-    static let emptyLabelText: String = "No game has been searched.."
     static let emptyLabelFont = UIFont(name: Fonts.Roboto.bold, size: 18)
     static let emptyLabelMinScaleFactor: CGFloat = 0.5
 
@@ -42,7 +41,6 @@ final class EmptyCellView: UIView {
     emptyLabel.adjustsFontSizeToFitWidth = true
     emptyLabel.minimumScaleFactor = Const.emptyLabelMinScaleFactor
     emptyLabel.baselineAdjustment = .alignCenters
-    emptyLabel.text = Const.emptyLabelText
     emptyLabel.font = Const.emptyLabelFont
   }
 

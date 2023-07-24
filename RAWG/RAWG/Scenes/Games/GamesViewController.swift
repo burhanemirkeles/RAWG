@@ -60,7 +60,9 @@ class GamesViewController: UIViewController {
     var nodes: [CellNode] = []
 
     if viewModel.games.isEmpty {
-      let emptyCell = CellNode(id: "EmptyCell", EmptyCellItem())
+      let emptyCell = CellNode(id: "EmptyCell",
+                               EmptyCellItem(id: 1,
+                                             labelText: "No game has been searched..."))
       nodes.append(emptyCell)
     } else {
       for game in viewModel.games {
