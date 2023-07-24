@@ -14,6 +14,7 @@ class FavoritesViewModel {
   var games: [Game] {
     return getGamesData() ?? []
   }
+  weak var delegate: GamesViewModelDelegate?
 
   func getGamesData() -> [Game]? {
     var games: [Game] = []
@@ -35,10 +36,11 @@ class FavoritesViewModel {
                     name: entity.gameName ?? "",
                     genres: genresArray,
                     gameImage: entity.gameImage,
-                    metacritic: entity.gameMetacriticScore.hashValue)
+                    metacritic: Int(entity.gameMetacriticScore))
       }
     } catch {
       print("Error while getting data: \(error)")
+      self.delegate?.didFetchGamesData()
       return nil
     }
     return games
