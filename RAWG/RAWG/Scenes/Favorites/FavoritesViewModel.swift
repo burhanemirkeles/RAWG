@@ -32,7 +32,7 @@ class FavoritesViewModel {
             return Genre(name: name)
           } ?? []
 
-        return Game(id: entity.id.hashValue,
+        return Game(id: Int(entity.gameId),
                     name: entity.gameName ?? "",
                     genres: genresArray,
                     gameImage: entity.gameImage,

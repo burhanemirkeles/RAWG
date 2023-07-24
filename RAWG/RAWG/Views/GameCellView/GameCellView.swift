@@ -89,7 +89,7 @@ final class GameCellView: UIView {
     gameViewModel?.selectedGameId = id
 
     if let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
-       gameDetailViewController.gameId = self.id
+       gameDetailViewController.gameId = Int(self.id)
        gameDetailViewController.getGameDetail()
        navigationController.pushViewController(gameDetailViewController, animated: true)
      }
