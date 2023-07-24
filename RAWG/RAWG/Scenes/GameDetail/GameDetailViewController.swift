@@ -114,6 +114,8 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
       } catch {
         print("Error while saving: \(error)")
       }
+    } else {
+      // TODO: UNFAVORITE 
     }
   }
 
