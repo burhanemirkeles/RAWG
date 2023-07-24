@@ -68,11 +68,18 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
 
     let detailSection = Section(id: "DetailSection", cells: nodes)
     renderer.render(detailSection)
+    addFavoriteButton()
 
   }
 
   func addFavoriteButton() {
-    let rightButton = UIBarButtonItem(title: "Favorite",
+    var title = ""
+    if viewModel.checkIsGameFavorited(desiredGameId: gameId ?? 0) {
+      title = "Favorited"
+    } else {
+      title = "Favorite"
+    }
+    let rightButton = UIBarButtonItem(title: title,
                                       style: .plain,
                                       target: self,
                                       action: #selector(favoriteButtonTapped))
@@ -101,11 +108,20 @@ class GameDetailViewController: UIViewController, GamesViewModelDelegate {
     game.gameGenres = combinedString
     game.gameMetacriticScore = gameDetail.metacritic != nil ? Int32(gameDetail.metacritic!) : 0
 
-    do {
+    if !viewModel.checkIsGameFavorited(desiredGameId: gameId ?? 0) {
+      do {
         try context.save()
-      print(game)
-    } catch {
+        render()
+        print(game)
+      } catch {
         print("Error while saving: \(error)")
+      }
+    } else {
+      do {
+       viewModel.unfavoriteGame(withId: gameId ?? 0)
+        render()
+        print(game)
+      }
     }
   }
 
