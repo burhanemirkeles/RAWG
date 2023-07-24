@@ -64,6 +64,7 @@ final class GameDetailView: UIView, Component {
     titleLabel.font = UIFont(name: Fonts.Roboto.bold, size: 36)
     titleLabel.textColor = .white
     titleLabel.textAlignment = .right
+    titleLabel.adjustsFontSizeToFitWidth = true
 
     gameDescription.text = "Game Description"
     gameDescription.font = UIFont(name: Fonts.Roboto.regular, size: 12)
