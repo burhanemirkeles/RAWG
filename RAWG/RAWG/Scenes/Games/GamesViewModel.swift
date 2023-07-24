@@ -84,7 +84,6 @@ class GamesViewModel {
       let result = try managedContext.fetch(fetchRequest)
 
       if result.first is NSManagedObject {
-
         isFavorited = true
       } else {
         isFavorited = false
