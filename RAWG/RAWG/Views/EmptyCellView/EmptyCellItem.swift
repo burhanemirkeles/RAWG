@@ -12,9 +12,12 @@ struct EmptyCellItem : IdentifiableComponent {
 
   var id = 1
   let referenceSizeHeight: CGFloat = 136
+  var labelText: String
 
   // MARK: - Component
-  func render(in content: EmptyCellView) { }
+  func render(in content: EmptyCellView) {
+    content.emptyLabel.text = labelText
+  }
 
   func referenceSize(in bounds: CGRect) -> CGSize? {
     return CGSize(width: bounds.width, height: referenceSizeHeight)

@@ -60,7 +60,9 @@ class FavoritesViewController: UIViewController {
   func render() {
     var nodes: [CellNode] = []
     if viewModel.games.isEmpty {
-      let emptyCell = CellNode(id: "EmptyCell", EmptyCellItem())
+      let emptyCell = CellNode(id: "EmptyCell",
+                               EmptyCellItem(id: 1,
+                                             labelText: "There is no favorites found."))
       nodes.append(emptyCell)
     } else {
       for game in viewModel.games {
